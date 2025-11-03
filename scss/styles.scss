@@ -1,0 +1,191 @@
+@use 'todo.scss'; 
+@use 'notes.scss';
+@use 'auxiliarClasses.scss';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    min-height: 100vh;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #000000;
+    min-height: 100vh;
+    width: 100%;
+    padding: 0px;
+    // position: relative;
+    overflow-x: hidden;
+}
+header{
+    max-height: 50px;
+    margin: 25px;
+}
+#main{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: black;
+    min-height: 100%;
+    width: 100vw;
+    gap: 50px;
+    // background-color: rgb(248, 241, 231);
+    // padding-bottom: 30px;
+
+}
+#notes{
+    background-color: rgb(34, 34, 34);
+    // background-color: rgb(252, 225, 176);
+    // background-color: rgb(253, 233, 202);
+
+    height: 465px;
+    width: 90%;
+    overflow-x: auto;
+    padding: 20px;
+    padding-left: 2.2%;
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: 8px;
+    border-top-left-radius: 0;
+
+    
+}
+#toDo{
+    background-color: rgb(34, 34, 34);
+    height: 185px;
+    width: 90%;
+    // margin-top: 20px;
+    overflow-x: auto;
+    padding: 20px;
+    padding-left: 2.2%;
+
+    border-radius: 8px;
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-top-left-radius: 0;
+    
+}
+#title{
+    color: white;
+}
+#containerToDo{
+    height: 200px;
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+#containerNotes{
+    height: 465px;
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: center;    
+}
+
+@media (max-width: 1800px){
+    .main{
+        max-width: 1200px;
+        justify-content: center;
+    }
+    #containerToDo{
+        width: 1010px;
+    }
+    #toDo{
+        width: 1010px;
+        padding-left: 3%;
+
+    }
+    #containerNotes{
+        width: 1010px;
+    }
+    #notes{
+        width: 1010px;
+        padding-left: 3%;
+
+    }
+    #title-sectionA, #title-sectionB{
+        left: .1%;
+    }
+
+}
+@media (max-width: 1100px){
+    .main{
+        max-width: 1200px;
+        justify-content: center;
+    }
+    #containerToDo{
+        width: 685px;
+        
+    }
+    #toDo{
+        width: 685px;
+        padding-left: 4.4%;
+
+    }
+    #containerNotes{
+        width: 685px;
+        height: 700px;
+        
+    }
+    #notes{
+    width: 685px;
+    padding-left: 4.4%;
+    height: auto;
+    min-height: 465px;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    }          
+    #title-sectionA, #title-sectionB{
+        left: .1%;
+    }
+}   
+
+@media (max-width: 700px){
+    .main{
+        max-width: 1200px;
+        justify-content: center;
+    }
+    #containerToDo{
+        width: 320px;
+
+    }
+    #toDo{
+        width: 320px;
+        padding-left: 20px;
+    }
+    #containerNotes{
+        width: 320px;
+        height: 500px;
+
+    }
+    #notes{
+        width: 320px;
+        padding-left: 20px;
+    }
+    #noteInputDiv{
+        width: 276px;
+    }
+    #noteInputDiv{
+        height: 430px;
+    }
+    #addToDoInput{
+        width: 280px;
+        height: 145px;
+    }
+    #title-sectionA, #title-sectionB{
+        left: .2%;
+    }
+}
